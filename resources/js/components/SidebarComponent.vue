@@ -3,15 +3,34 @@
         <div class="container-sidebar">
             <div class="side-menu-container">
                 <nav class="sidebar">
-                    <li class="sidebar-item">Dashboard</li>
-                    <li class="sidebar-item">Inventario</li>
-                    <li class="sidebar-item">Proveedores</li>
-                    <li class="sidebar-item">Usuarios</li>
-                    <li class="sidebar-item">Respaldo</li>
+                    <router-link class="sidebar-item" to="/">
+                        <i class="fas fa-columns"></i>
+                        Dashboard
+                    </router-link>
+
+                    <router-link class="sidebar-item" to="/inventario">
+                        <i class="fas fa-boxes"></i>
+                        Inventario
+                    </router-link>
+
+                    <router-link class="sidebar-item" to="/proveedores">
+                        <i class="fas fa-people-carry"></i>
+                        Proveedores
+                    </router-link>
+
+                    <router-link class="sidebar-item" to="/usuarios">
+                        <i class="fas fa-users"></i>
+                        Usuarios
+                    </router-link>
+
+                    <router-link class="sidebar-item" to="/reportes">
+                        <i class="fas fa-file-alt"></i>
+                        Reportes
+                    </router-link>
                 </nav>
             </div>
             <div class="page-content">
-                <p>This is an example content so we can see how this baby slides in</p>
+                <router-view></router-view>
             </div>
         </div>
     </div>
@@ -31,6 +50,11 @@
         list-style: none;
     }
 
+    .isActive {
+        background-color: rgba(255,255,255,0.1);
+        border-left: 3px solid #fff;
+    }
+
     .container-sidebar {
         display:flex;
     }
@@ -48,20 +72,23 @@
     }
 
     .sidebar-item {
-        padding: 12px 18px;
+        padding: 12px 18px 12px 30px;
         color: #fff;
         font-size: 15px;
-        margin-left: 25px;
-        transition: all .3s ease;
+        transition: background-color .3s ease;
+        text-decoration: none;
+        margin: 10px 0px;
     }
 
     .sidebar-item:hover {
         background-color: rgba(255,255,255,0.1);
+        border-left: 3px solid #fff;
     }
 
     .page-content {
         width: auto;
         height: 100vh;
+        margin: 30px;
     
     }
 </style>
