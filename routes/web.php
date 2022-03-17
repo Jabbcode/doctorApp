@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('{any}', function(){
+//     return view('app');
+// });
+
 Auth::routes();
 
 Route::get('/administrador', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');

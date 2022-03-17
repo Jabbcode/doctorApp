@@ -55,7 +55,8 @@ export default {
 
     .toggle {
         border: none;
-        background-color: transparent
+        background-color: transparent;
+        font-size: 20px;
     }
 
     .buscador {
